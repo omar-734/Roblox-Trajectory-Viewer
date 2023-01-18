@@ -1,0 +1,15 @@
+local function Position(Origin, Initial, g, Time)
+   return Origin + Initial * Time + g * Time * Time / 2
+end
+
+local OriginPart = workspace:WaitForChild("Start")
+local Gravity = Vector3.new(0, -workspace.Gravity, 0)
+local GoTo = OriginPart.CFrame.LookVector * 46 + OriginPart.CFrame.UpVector * 65
+local StartPosition = OriginPart.Position
+
+local Velocity = .25
+local Total = 0
+while true do
+    Total += game:GetService("RunService").Heartbeat:Wait()*Velocity
+    Part.Position = Position(StartPosition, GoTo, Gravity, Total)
+end
