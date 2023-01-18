@@ -1,0 +1,1 @@
+This is a simple trajectory calculator to use in games, with an executor, or just testing in roblox studio. If you enter the partname it will show a little sphere that will jump to where the part(s) should land if thrown. Very useful for fps games but you can make it calculate the part that you want to see the trajectory of yourself. I am too lazy <3
